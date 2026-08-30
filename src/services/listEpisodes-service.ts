@@ -1,4 +1,4 @@
-import { PodcastTransferModel } from "../models/filterPodcast-model";
+import { PodcastTransferModel } from "../models/podcastTransferModel";
 import { repoPodcasts } from "../repositories/podcast-repository";
 import { StatusCode } from "../utils/status-code";
 

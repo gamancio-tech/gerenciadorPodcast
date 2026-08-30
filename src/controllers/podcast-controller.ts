@@ -4,7 +4,7 @@ import { listEpisodesService } from '../services/listEpisodes-service'
 import { filterEpisodesService } from '../services/filterEpisodes-service'
 import { StatusCode } from '../utils/status-code';
 import { ContentType } from '../utils/content-type';
-import { PodcastTransferModel } from '../models/filterPodcast-model';
+import { PodcastTransferModel } from '../models/podcastTransferModel';
 
 export const getListEpisodes = async (
   res: ServerResponse
@@ -26,7 +26,7 @@ export const getFilterEpisodes = async (
 
   res.writeHead(content.statusCode, { 'content-type': ContentType.JSON })
   res.write(JSON.stringify(content.body))
-  
+
   res.end()
 }
 
@@ -34,7 +34,7 @@ export const notFoundRoute = async (res: ServerResponse) => {
 
   res.writeHead(StatusCode.NOT_FOUND, { 'content-type': ContentType.JSON })
   res.write(JSON.stringify({ message: 'Rota não encontrada' }))
-  
+
   res.end()
 
 }
