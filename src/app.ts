@@ -10,7 +10,7 @@ export const app = async (request: http.IncomingMessage, response: http.ServerRe
   const [baseUrl, queryString] = request.url?.split('?') ?? ['', '']
 
   if (request.method === HttpMethods.GET && baseUrl === Routes.LIST_EPISODES) {
-    await getListEpisodes(request, response);
+    await getListEpisodes(response);
     return;
   }
 
